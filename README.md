@@ -17,7 +17,7 @@
 * Los usuarios nuevos utilizarian la app para reconocer las peliculas y sus respectivos personajes. Y los seguidores antiguos, para poder saber informacion relevante de cada pelicula como detalles de personajes, u otro.
  
 
-# Diseño de interfaz de usuario
+# *Diseño de interfaz de usuario*
 
 ### ***Prototipo de baja fidelidad***
 
