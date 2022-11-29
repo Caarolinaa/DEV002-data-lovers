@@ -21,10 +21,10 @@
 
 ### ***Prototipo de baja fidelidad***
 
-![prototipo1] (src/img/BF.png)
+![prototipo1](src/img/BF.png)
 
 
 ### ***Prototipo de Alta fidelidad***
 
-![prototipo2] (src/img/BF.png)
+![prototipo2](src/img/AF.png)
 
