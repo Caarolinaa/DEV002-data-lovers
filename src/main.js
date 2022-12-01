@@ -1,28 +1,33 @@
 import { example } from './data.js';
-
+// import data from './data/lol/lol.js';
 import data from './data/ghibli/ghibli.js';
+// import data from './data/rickandmorty/rickandmorty.js';
 
-//console.log(data.films[0].poster);
-//console.log(example, data);
+console.log(example, data);
+console.log(data.films[0].poster)
 
-const root = document.getElementById("peliculas")
-root.classList="poster-style"
-root.innerHTML = `
-`
+const prueba = document.getElementById("prueba")
+prueba.classList="poster-style"
 
-const peliculas =data.films
+// prueba.innerHTML = `
+// <p class= "prueba"> ${data.films[0].poster}</p>
+// <img src="${data.films[0].poster}" />`
+
+
+
+const movies = data.films
 console.log(data.films[0].title);
 
-const generadorHTML=(peliculas)=> {
+const generadorHTML=(movies)=> {
     const div = document.createElement("div")
 
-    const titlepelicula = document.createElement ("titlepelicula")
-    titlepelicula.textContent=peliculas.title
+    const movieTitle = document.createElement ("movieTitle")
+    movieTitle.textContent=movies.title
 
     const img = document.createElement("img")
-    img.setAttribute("src", peliculas.poster)
+    img.setAttribute("src", movies.poster)
 
-    div.append(img, titlepelicula)
+    div.append(img, movieTitle)
     return div
 }
-peliculas.forEach(pelicula=>root.appendChild(generadorHTML(pelicula)))
+movies.forEach(pelicula=>prueba.appendChild(generadorHTML(pelicula)))

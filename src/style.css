@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background-color: #264b6b;
+    
+}
+
+.logo {
+    justify-content: center;
+}
+.poster-style{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: space-around;
+    }
+    
