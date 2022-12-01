@@ -4,10 +4,9 @@ import data from './data/ghibli/ghibli.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 
 console.log(example, data);
-console.log(data.films[0].poster)
+// console.log(data.films[0].poster)
 
 const prueba = document.getElementById("prueba")
-prueba.classList="poster-style"
 
 // prueba.innerHTML = `
 // <p class= "prueba"> ${data.films[0].poster}</p>
@@ -16,7 +15,7 @@ prueba.classList="poster-style"
 
 
 const movies = data.films
-console.log(data.films[0].title);
+// console.log(data.films[0].title);
 
 const generadorHTML=(movies)=> {
     const div = document.createElement("div")
