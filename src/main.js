@@ -18,9 +18,9 @@ const movies = data.films
 // console.log(data.films[0].title);
 
 const generadorHTML=(movies)=> {
-    const div = document.createElement("div")
+    const div = document.createElement("article")
 
-    const movieTitle = document.createElement ("movieTitle")
+    const movieTitle = document.createElement ("h2")
     movieTitle.textContent=movies.title
 
     const img = document.createElement("img")
