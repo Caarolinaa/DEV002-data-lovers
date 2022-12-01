@@ -12,13 +12,35 @@ body {
     
 }
 
+header {
+    width: 100%;
+}
+
 .logo {
+    display: flex;
+    margin-top: 1%;
     justify-content: center;
 }
+
+.buscador{
+    width: 90%;
+    margin: 5%;
+    text-align: center;
+    max-width: 20%;
+    padding: 5px;
+    border-radius: 10px;
+
+}
+
 .poster-style{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     align-content: space-around;
+    text-align: center;
+    font-size:small;
+
     }
+
+
     
