@@ -1,7 +1,7 @@
-import { example } from './data.js';
+import { dataMovies } from './data.js';
 import data from './data/ghibli/ghibli.js';
 
-console.log(example, data);
+console.log(dataMovies, data);
 // console.log(data.films[0].poster)
 
 const moviesPoster = document.getElementById("moviesPoster")
@@ -19,6 +19,9 @@ const generadorHTML=(movies)=> {
     const img = document.createElement("img")
     img.setAttribute("src", movies.poster)
     img.setAttribute("class", "imgposter")
+
+    const date = data.release_date
+    
 
     div.append(img, movieTitle)
     return div

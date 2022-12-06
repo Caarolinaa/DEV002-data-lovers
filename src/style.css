@@ -33,7 +33,7 @@ header {
 }
 
 .selectorfilter {
-    display:flex;
+    display: flex;
     transform:translate(840px, -80px);
     width: 10%;
     text-align: center;
@@ -44,7 +44,7 @@ header {
 
 .poster-style {
     display: flex;
-    padding: 10% 10% 10% 10%;
+    padding: 2% 22% 5% 22%;
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: baseline;
@@ -58,7 +58,7 @@ header {
 
 .titleh3 {
     color: white;
-    font-size:small;
+    font-size:x-small;
     text-align: center;
     
 }
