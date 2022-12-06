@@ -1,10 +1,10 @@
-import { example } from './data.js';
+import { dataMovies } from './data.js';
 import data from './data/ghibli/ghibli.js';
 
-console.log(example, data);
+console.log(dataMovies, data);
 // console.log(data.films[0].poster)
 
-const prueba = document.getElementById("prueba")
+const moviesPoster = document.getElementById("moviesPoster")
 
 
 const movies = data.films
@@ -19,9 +19,15 @@ const generadorHTML=(movies)=> {
     movieTitle.textContent=movies.title
 
     const img = document.createElement("img")
+    img.setAttribute("class", "imgposter")
     img.setAttribute("src", movies.poster)
 
     div.append(img, movieTitle)
     return div
 }
-movies.forEach(pelicula=>prueba.appendChild(generadorHTML(pelicula)))
+movies.forEach(pelicula=>moviesPoster.appendChild(generadorHTML(pelicula)))
+
+// const peliculaFiltrada = movies.filter (function(el) {
+//     return (el.title[0])
+// })
+// console.log(peliculaFiltrada)
