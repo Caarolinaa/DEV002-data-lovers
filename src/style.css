@@ -12,8 +12,16 @@ body {
 }
 
 header {
-    width: 100%;
-    height: 30%;
+padding: 0% 20% 0% 20%;
+}
+
+.video{
+    position:absolute;
+    left: 0%;
+    top: 0%;
+    margin-bottom: 0%;
+    z-index: -10;
+    padding: 0% 0% 0% 0%;
 }
 
 .logo {
@@ -23,31 +31,39 @@ header {
 }
 
 .buscador {
-    width: 90%;
-    margin: 5% 40% 5% 40%;
+    width: 30%;
+    padding: 6px;
+    margin: 5% 30% 3% 35%;
     text-align: center;
-    max-width: 20%;
-    padding: 5px;
     border-radius: 10px;
 
 }
 
 .selectorfilter {
-    display:flex;
-    transform:translate(840px, -80px);
-    width: 10%;
+    display: flex;
+    margin: 1% 20% 5% 35%;
+    width: 30%;
+    padding: 5px;
     text-align: center;
-    max-width: 20%;
     border-radius: 10px;
     cursor: pointer;
 }
 
 .poster-style {
     display: flex;
-    padding: 10% 10% 10% 10%;
+    padding: 2% 22% 5% 22%;
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: baseline;
+   background-color: #502235;
+}
+
+.articlemovie{
+    display: block;
+    margin: 1%;
+    padding: 1% 1% 1% 1%;
+    background-color: rgb(76, 135, 184);
+    border-radius: 10px;
 }
 
 .imgposter {
@@ -58,10 +74,8 @@ header {
 
 .titleh3 {
     color: white;
-    font-size:small;
+    font-size: 10px;
     text-align: center;
-    flex-flow: wrap column;
-    
 }
 
 footer{
