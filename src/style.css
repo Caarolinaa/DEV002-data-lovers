@@ -12,8 +12,16 @@ body {
 }
 
 header {
-    width: 100%;
-    height: 30%;
+padding: 0% 20% 0% 20%;
+}
+
+.video{
+    position:absolute;
+    left: 0%;
+    top: 0%;
+    margin-bottom: 0%;
+    z-index: -10;
+    padding: 0% 0% 0% 0%;
 }
 
 .logo {
@@ -23,7 +31,9 @@ header {
 }
 
 .buscador {
-    margin: 5% 40% 5% 40%;
+    width: 30%;
+    padding: 6px;
+    margin: 5% 30% 3% 35%;
     text-align: center;
     border-radius: 10px;
 
@@ -31,8 +41,9 @@ header {
 
 .selectorfilter {
     display: flex;
-    transform:translate(840px, -80px);
-    width: 10%;
+    margin: 1% 20% 5% 35%;
+    width: 30%;
+    padding: 5px;
     text-align: center;
     border-radius: 10px;
     cursor: pointer;
@@ -44,6 +55,15 @@ header {
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: baseline;
+   background-color: #502235;
+}
+
+.articlemovie{
+    display: block;
+    margin: 1%;
+    padding: 1% 1% 1% 1%;
+    background-color: rgb(76, 135, 184);
+    border-radius: 10px;
 }
 
 .imgposter {
@@ -54,7 +74,7 @@ header {
 
 .titleh3 {
     color: white;
-    font-size:x-small;
+    font-size: 10px;
     text-align: center;
 }
 
