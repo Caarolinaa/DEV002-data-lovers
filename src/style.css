@@ -11,7 +11,12 @@ body {
     background-color: #5688b5;
 }
 
-main .home-logo {
+header {
+    width: 100%;
+    height: 30%;
+}
+
+.logo {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -50,30 +55,38 @@ main .home-logo {
 }
 
 .buscador {
-    width: 90%;
-    margin: 5% 40% 5% 40%;
+    width: 30%;
+    padding: 6px;
+    margin: 5% 30% 3% 35%;
     text-align: center;
-    max-width: 20%;
-    padding: 5px;
     border-radius: 10px;
 
 }
 
 .selectorfilter {
-    display: flex;
-    justify-content: center;
+    display:flex;
+    transform:translate(840px, -80px);
+    width: 10%;
     text-align: center;
-    max-width: 20%;
     border-radius: 10px;
     cursor: pointer;
 }
 
 .poster-style {
     display: flex;
-    padding: 10% 10% 10% 10%;
+    padding: 2% 22% 5% 22%;
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: baseline;
+   background-color: #502235;
+}
+
+.articlemovie{
+    display: block;
+    margin: 1%;
+    padding: 1% 1% 1% 1%;
+    background-color: rgb(76, 135, 184);
+    border-radius: 10px;
 }
 
 .imgposter {
@@ -84,10 +97,10 @@ main .home-logo {
 
 .titleh3 {
     color: white;
-    font-size: small;
+    font-size:small;
     text-align: center;
     flex-flow: wrap column;
-
+    
 }
 
 footer {
