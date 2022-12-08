@@ -4,8 +4,16 @@ import data from './data/ghibli/ghibli.js';
 console.log(dataMovies, data);
 // console.log(data.films[0].poster)
 
-const moviesPoster = document.getElementById("moviesPoster")
+// const moviesPoster = document.getElementById("home2")
+// document.getElementById("home1").style.visibility = "visible";
+// document.getElementById("home2").style.visibility ="hidden";
 
+const mostrar = document.getElementById("films-button");
+mostrar.addEventListener("click",mostrarPantalla);
+function mostrarPantalla(){
+    document.getElementById("home1").style.display = "none";
+    document.getElementById("home2").style.visibility = "visible"
+}
 
 const movies = data.films
 // console.log(data.films[0].title);

@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,18 +8,45 @@
 body {
     height: auto;
     width: auto;
-    background-color: #063661;
+    background-color: #5688b5;
 }
 
-header {
-    width: 100%;
-    height: 30%;
-}
-
-.logo {
+main .home-logo {
     display: flex;
-    margin-top: 1%;
+    align-items: center;
     justify-content: center;
+    flex-direction: column;
+}
+
+ .home1 .home-logo button {
+    background-color: #5688b5;
+    border: none;
+    cursor: pointer;
+}
+
+@font-face {
+    font-family: dream;
+    src: url(/src/letras/Dreamline2.otf);
+}
+
+
+.home-phrase {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: dream;
+}
+.home-button {
+    text-align: center;
+}
+
+
+ .home-button .films-button {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    cursor: pointer;
+
 }
 
 .buscador {
@@ -33,9 +60,8 @@ header {
 }
 
 .selectorfilter {
-    display:flex;
-    transform:translate(840px, -80px);
-    width: 10%;
+    display: flex;
+    justify-content: center;
     text-align: center;
     max-width: 20%;
     border-radius: 10px;
@@ -58,14 +84,14 @@ header {
 
 .titleh3 {
     color: white;
-    font-size:small;
+    font-size: small;
     text-align: center;
     flex-flow: wrap column;
-    
+
 }
 
-footer{
-    margin-bottom: 1% ;
+footer {
+    margin-bottom: 1%;
     text-align: center;
-    color:white;
+    color: white;
 }
