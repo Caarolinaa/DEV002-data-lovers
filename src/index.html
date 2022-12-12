@@ -9,45 +9,29 @@
 </head>
 
 <body>
-  <main>
-    <!-- home -->
-    <section class="home1">
-      <div class="home-logo">
-        <button id=ghibliHome>
-          <img src="./img/logoGhibli.png" alt="" width="500px" height="220px">
-        </button>
-      </div>
-      <div class="home-phrase">
-        <span> "No puedes cambiar tu destino, pero puedes acudir a su encuentro."</span>
-      </div>
-    </section>
-    <section class="home-button">
-      <button type="button" id="films-button">PELICULAS</button>
-    </section>
-
-    <!-- home2 -->
-    <section class="home2">
-    <input type="search" class="buscador" placeholder="Busca alguna película">
   <header>
-    <div class="video" > 
-      <video src="./img/VideoStudioGhibli.mp4" autoplay="true" muted="true" loop="true" height="1070px"></video>
+    <div class="video">
+      <video src="./img/cielostrellado.mp4" autoplay="true" muted="true" loop="true" height="1043px"></video>
+      //studioghibli 1070px
     </div>
-      <div class="logo">
+    <div class="logo">
       <img src="./img/logoGhibli.png" alt="" width="500px" height="220px">
     </div>
 
-   
+    <input type="text" class="buscador" id="buscadorMovie" name="buscador" placeholder="Busca tu película">
 
-    <input type="search" class="buscador" placeholder="Busca tu película">
     <div>
-      <select class="selectorfilter">
+      <select id="selectorfilter">
         <option value="0" selected> Ordenar por </option>
         <option value="1"> Año: Más reciente </option>
         <option value="2"> Año: Más antiguo </option>
       </select>
+
     </div>
-  </section>
-      <section id="moviesPoster" class="poster-style"></section>
+
+  </header>
+  <main>
+    <section id="moviesPoster" class="poster-style"></section>
   </main>
 
   <script src="main.js" type="module"></script>
