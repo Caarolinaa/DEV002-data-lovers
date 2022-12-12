@@ -1,9 +1,12 @@
 //importamos funciones de data.js
-import { dataMovies, dataMoviesDesc, dataMoviesAsc } from './data.js';
+import { dataMoviesDesc, dataMoviesAsc } from './data.js';
 import data from './data/ghibli/ghibli.js';
 
 //const para guardar la data desde ghibli.js
 const movies = data.films
+const moviesPoster = document.getElementById("moviesPoster");
+
+
 
 //Variable que contiene los arrays de films
 const generadorHTML = (movies) => {
@@ -29,7 +32,15 @@ const generadorHTML = (movies) => {
     div.append(img, movieTitle, date)
     return div
 }
-movies.forEach(pelicula => moviesPoster.appendChild(generadorHTML(pelicula)))
+
+const generadorCard = (data) => {
+    moviesPoster.innerHTML = "";
+    data.forEach(pelicula => moviesPoster.appendChild(generadorHTML(pelicula)))
+}
+
+generadorCard(movies)
+
+
 
 // Filtrar películas por año
 
@@ -38,19 +49,24 @@ selectDate.addEventListener("change", function(event){
     const value = document.getElementById ("selectorfilter").value;
     if (event.target.value === "1"){
     let movieAsc= dataMoviesAsc(movies)   
-    console.log(movieAsc);  
+    console.log(movieAsc); 
+    generadorCard(movieAsc) 
     }else if (event.target.value === "2"){
     let movieDes = dataMoviesDesc(movies)
     console.log(movieDes);
+    generadorCard(movieDes) 
     }
 });
 
 
 //Buscador
-document.addEventListener("keyup", e=>{
-   if(e.target.matches("buscadorMovie")){
-    document.querySelectorAll("titleh3").forEach(titulo =>{
-        titulo.textContent.toLowerCase().includes(e.target.value.toLowerCase())
+let searchMovie = document.getElementById("buscadorMovie");
+searchMovie.addEventListener("keyup", e =>{
+    //console.log(e.target.value);
+   if(e.target.matches("#buscadorMovie")){
+    document.querySelectorAll(".titleh3").forEach(titulo =>{
+        console.log(titulo);
+        titulo.textContent.toLowerCase().includes(e.target.value)
         ?titulo.classList.remove("filtro")
         :titulo.classList.add("filtro")
     })
