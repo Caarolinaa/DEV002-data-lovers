@@ -1,10 +1,10 @@
-import { dataMovies } from './data.js';
+import {  } from './data.js';
 import data from './data/ghibli/ghibli.js';
 
-console.log(dataMovies, data);
+// console.log(dataMovies, data);
 // console.log(data.films[0].poster)
 
-// const moviesPoster = document.getElementById("home2")
+ const moviesPoster = document.getElementById("home2")
 // document.getElementById("home1").style.visibility = "visible";
 // document.getElementById("home2").style.visibility ="hidden";
 
