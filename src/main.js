@@ -5,8 +5,6 @@ import data from './data/ghibli/ghibli.js';
 //const para guardar la data desde ghibli.js
 const movies = data.films
 
-const moviesPoster = document.getElementById("moviesPoster")
-
 //Variable que contiene los arrays de films
 const generadorHTML = (movies) => {
     const div = document.createElement("article")
