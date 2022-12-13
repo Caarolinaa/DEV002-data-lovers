@@ -18,16 +18,7 @@ header {
     padding: 0% 20% 0% 20%;
 }
 
-.video {
-    position: absolute;
-    left: 0%;
-    top: 0%;
-    margin-bottom: 0%;
-    z-index: -10;
-    padding: 0% 0% 0% 0%;
-}
-
-.logo {
+.home-logo {
     display: flex;
     margin-top: 1%;
     justify-content: center;
@@ -56,12 +47,21 @@ header {
     cursor: pointer;
 }
 
+.selectorfilter, option{
+    background-color: #998fdd;
+}
+
 .poster-style {
     display: flex;
     padding: 2% 22% 5% 22%;
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: baseline;
+}
+
+.articlemovie:hover{
+    box-shadow: 1px 0px 0px 5px rgb(216, 137, 164);
+    cursor: pointer;
 }
 
 .articlemovie {
