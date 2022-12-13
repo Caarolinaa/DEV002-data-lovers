@@ -49,11 +49,11 @@ selectDate.addEventListener("change", function(event){
     const value = document.getElementById ("selectorfilter").value;
     if (event.target.value === "1"){
     let movieAsc= dataMoviesAsc(movies)   
-    console.log(movieAsc); 
+    //console.log(movieAsc); 
     generadorCard(movieAsc) 
     }else if (event.target.value === "2"){
     let movieDes = dataMoviesDesc(movies)
-    console.log(movieDes);
+    //console.log(movieDes);
     generadorCard(movieDes) 
     }
 });
@@ -62,13 +62,16 @@ selectDate.addEventListener("change", function(event){
 //Buscador
 let searchMovie = document.getElementById("buscadorMovie");
 searchMovie.addEventListener("keyup", e =>{
+    let searchMov = filterSearch(movies)
+    generadorCard(searchMov)
     //console.log(e.target.value);
    if(e.target.matches("#buscadorMovie")){
     document.querySelectorAll(".titleh3").forEach(titulo =>{
-        console.log(titulo);
+        //console.log(titulo);
         titulo.textContent.toLowerCase().includes(e.target.value)
         ?titulo.classList.remove("filtro")
         :titulo.classList.add("filtro")
+        
     })
    }
 })

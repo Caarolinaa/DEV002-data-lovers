@@ -1,7 +1,8 @@
 export const filterSearch = (movies, value) => {
   let searchFilter = movies.filter(e => {
-  return e.title
-})
+    
+  return e.title 
+});
 return searchFilter;
 }
 
