@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,15 +8,18 @@
 body {
     height: auto;
     width: auto;
-    background-color: #063661;
+    background-color: #998fdd;
+    background-image: url(./img/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 header {
-padding: 0% 20% 0% 20%;
+    padding: 0% 20% 0% 20%;
 }
 
-.video{
-    position:absolute;
+.video {
+    position: absolute;
     left: 0%;
     top: 0%;
     margin-bottom: 0%;
@@ -39,7 +42,7 @@ padding: 0% 20% 0% 20%;
 
 }
 
-.filtro{
+.filtro {
     display: none;
 }
 
@@ -59,10 +62,9 @@ padding: 0% 20% 0% 20%;
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: baseline;
-   background-color: #1f1b3a;
 }
 
-.articlemovie{
+.articlemovie {
     display: block;
     margin: 1%;
     padding: 1% 1% 1% 1%;
@@ -88,8 +90,8 @@ padding: 0% 20% 0% 20%;
     font-size: 12px;
 }
 
-footer{
-    margin-bottom: 1% ;
+footer {
+    margin-bottom: 1%;
     text-align: center;
-    color:white;
+    color: white;
 }

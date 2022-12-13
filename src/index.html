@@ -10,26 +10,24 @@
 
 <body>
   <header>
-    <div class="video">
-      <video src="./img/cielostrellado.mp4" autoplay="true" muted="true" loop="true" height="1043px"></video>
-      //studioghibli 1070px
-    </div>
-    <div class="logo">
+    <div class="home-logo">
       <img src="./img/logoGhibli.png" alt="" width="500px" height="220px">
     </div>
-
-    <input type="text" class="buscador" id="buscadorMovie" name="buscador" placeholder="Busca tu película">
-
-    <div>
-      <select id="selectorfilter">
-        <option value="0" selected> Ordenar por </option>
-        <option value="1"> Año: Más reciente </option>
-        <option value="2"> Año: Más antiguo </option>
-      </select>
-
-    </div>
-
   </header>
+  <section class="filterSection">
+  <div class="searchName">
+    <input type="text" class="buscador" id="buscadorMovie" name="buscador" placeholder="Busca tu película">
+  </div>
+<!-- primera pantalla -->
+  <div class="filterYear">
+    <select id="selectorfilter">
+      <option value="0" selected> Ordenar por </option>
+      <option value="1"> Año: Más reciente </option>
+      <option value="2"> Año: Más antiguo </option>
+    </select>
+  </div>
+  </section>
+  <!-- Seccion de peliculas -->
   <main>
     <section id="moviesPoster" class="poster-style"></section>
   </main>
