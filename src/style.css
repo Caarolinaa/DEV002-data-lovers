@@ -45,12 +45,21 @@ header {
     cursor: pointer;
 }
 
+.selectorfilter, option{
+    background-color: #998fdd;
+}
+
 .poster-style {
     display: flex;
     padding: 2% 22% 5% 22%;
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: baseline;
+}
+
+.articlemovie:hover{
+    box-shadow: 1px 0px 0px 5px rgb(216, 137, 164);
+    cursor: pointer;
 }
 
 .articlemovie {

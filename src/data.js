@@ -1,9 +1,12 @@
-export const filterSearch = (movies, value) => {
+export const filterSearch = (movies) => {
   let searchFilter = movies.filter(e => {
-  return e.title
-})
+    return e.title;
+    
+});
 return searchFilter;
+
 }
+
 
 export const dataMoviesAsc = (movies) => {
   let yearSort = movies.sort((a, b) => {
