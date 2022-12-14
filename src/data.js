@@ -19,5 +19,3 @@ export const dataMoviesDesc = (movies) => {
   return yearSortDate;
 }
 
-  //la fecha release date es string, se pasa a number usando parseInt para que pueda ordenarlos por fecha Asc o Desc
-  //luego de usar Parseint pasar a filtrado
