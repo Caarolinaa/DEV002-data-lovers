@@ -11,21 +11,26 @@
 <body>
   <header>
     <div class="home-logo">
-      <img src="./img/logoGhibli.png" alt="" width="500px" height="220px">
+      <!-- <img src="./img/logoGhibli.png" alt="" width="500px" height="220px"> -->
+      <img src="./img/LOGO.png" width="900px">
     </div>
   </header>
   <section class="filterSection">
-  <div class="searchName">
-    <input type="search" class="buscador" id="buscadorMovie" name="buscador" placeholder="Busca tu película">
-  </div>
-<!-- primera pantalla -->
-  <div class="filterYear">
-    <select id="selectorfilter">
-      <option value="0" selected> Ordenar por </option>
-      <option value="1"> Año: Más reciente </option>
-      <option value="2"> Año: Más antiguo </option>
-    </select>
-  </div>
+    <div class="searchName">
+      <input type="search" class="buscador" id="buscadorMovie" name="buscador" placeholder="Busca tu película">
+    </div>
+    <!-- primera pantalla -->
+    <div class="filterYear">
+      <select id="selectorfilter">
+        <option value="0" selected> Ordenar por </option>
+        <option value="1"> Año: Más reciente </option>
+        <option value="2"> Año: Más antiguo </option>
+      </select>
+    </div>
+    <div class="btn-refresh">
+      <img id="boton-refresh" src="./img/buttonresfresh.png" width="250px" onclick="window.location.reload();">
+    </div>
+
   </section>
   <!-- Seccion de peliculas -->
   <main>
