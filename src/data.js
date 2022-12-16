@@ -1,8 +1,6 @@
-export const filterSearch = (movies) => {
-  let searchFilter = movies.filter(e => {
-    return e.title;
-    
-});
+export const filterSearch = (movies, value) => {
+  let searchFilter = movies.filter(e => e.title.toLowerCase().includes(value.toLowerCase())); 
+
 return searchFilter;
 
 }
@@ -21,6 +19,3 @@ export const dataMoviesDesc = (movies) => {
   });
   return yearSortDate;
 }
-
-  //la fecha release date es string, se pasa a number usando parseInt para que pueda ordenarlos por fecha Asc o Desc
-  //luego de usar Parseint pasar a filtrado
