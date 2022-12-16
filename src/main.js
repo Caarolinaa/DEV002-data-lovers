@@ -12,6 +12,7 @@ const moviesPoster = document.getElementById("moviesPoster");
 const generadorHTML = (movies) => {
     const div = document.createElement("article")
     div.setAttribute("class", "articlemovie")
+    div.setAttribute("id", movies.id)
 
     //título de cada película
     const movieTitle = document.createElement("h3")
@@ -75,3 +76,13 @@ searchMovie.addEventListener("keyup", e => {
     }
 })
 
+let movieClick = document.querySelectorAll('.articlemovie');
+// let movieModalClick = movieClick.
+// console.log(movieClick.length)
+
+for(let i = 0; i<movieClick.length;i++){
+  movieClick[i].addEventListener('click', (e) => {  
+    // eslint-disable-next-line no-console
+    console.log(movieClick[i].id);
+  });
+}
