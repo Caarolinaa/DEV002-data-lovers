@@ -25,13 +25,27 @@ const generadorHTML = (movies) => {
     img.setAttribute("class", "imgposter")
     img.setAttribute("src", movies.poster)
 
+    //modal realizado hoy
+    const a = document.createElement("a")
+    a.setAttribute("href","#"+movies.id )
+    a.appendChild(img)
+    const section = document.createElement("section")   
+    section.setAttribute("class", "modalDialog")        
+    section.setAttribute("id", movies.id)
+    const article = document.createElement("article")   
+    const p = document.createElement("p")   
+    p.textContent = movies.title
+    article.appendChild(p)
+    section.appendChild(article)
+
+
     //año de cada película
     const date = document.createElement("año")
     date.setAttribute("class", "dateMovies")
     date.textContent = movies.release_date
 
     //se crea div, append nos permite agrupar las 3 constantes de arriba en un div y se muestra en nuestra página
-    div.append(img, movieTitle, date)
+    div.append(a,section, movieTitle, date)
     return div
 }
 //funcion para mostrar los elementos en la pagina
@@ -48,7 +62,6 @@ generadorCard(movies)
 
 let selectDate = document.getElementById("selectorfilter");
 selectDate.addEventListener("change", function (event) {
-    const value = document.getElementById("selectorfilter").value;
     if (event.target.value === "1") {
         let movieAsc = dataMoviesAsc(movies)
         //console.log(movieAsc); 
@@ -64,19 +77,18 @@ selectDate.addEventListener("change", function (event) {
 //Buscador
 let searchMovie = document.getElementById("buscadorMovie");
 searchMovie.addEventListener("keyup", e => {
-    console.log(e.target.value);
+    //console.log(e.target.value);
     let searchMov = filterSearch(movies, e.target.value);
-    console.log(searchMov);
+    //console.log(searchMov);
     generadorCard(searchMov);
 })
 
-let movieClick = document.querySelectorAll('.articlemovie');
+//let movieClick = document.querySelectorAll('.articlemovie');
 // let movieModalClick = movieClick.
 // console.log(movieClick.length)
 
-for(let i = 0; i<movieClick.length;i++){
-  movieClick[i].addEventListener('click', (e) => {  
-    // eslint-disable-next-line no-console
-    console.log(movieClick[i].id);
-  });
-}
+//for(let i = 0; i<movieClick.length;i++){
+  //movieClick[i].addEventListener('click', (e) => {  
+    //console.log(movieClick[i].id);
+  //});
+//}

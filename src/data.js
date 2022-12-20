@@ -19,4 +19,3 @@ export const dataMoviesDesc = (movies) => {
   });
   return yearSortDate;
 }
-
