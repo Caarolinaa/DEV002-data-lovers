@@ -30,6 +30,7 @@ const generadorHTML = (movies) => {
     date.setAttribute("class", "dateMovies")
     date.textContent = movies.release_date
 
+
     //se crea div, append nos permite agrupar las 3 constantes de arriba en un div y se muestra en nuestra página
     div.append(img, movieTitle, date)
     return div
@@ -52,6 +53,7 @@ selectDate.addEventListener("change", function (event) {
     if (event.target.value === "1") {
         let movieAsc = dataMoviesAsc(movies)
         //console.log(movieAsc); 
+        console.log(value)
         generadorCard(movieAsc)
     } else if (event.target.value === "2") {
         let movieDes = dataMoviesDesc(movies)
@@ -64,9 +66,9 @@ selectDate.addEventListener("change", function (event) {
 //Buscador
 let searchMovie = document.getElementById("buscadorMovie");
 searchMovie.addEventListener("keyup", e => {
-    console.log(e.target.value);
+    // console.log(e.target.value);
     let searchMov = filterSearch(movies, e.target.value);
-    console.log(searchMov);
+    // console.log(searchMov);
     generadorCard(searchMov);
 })
 
@@ -80,3 +82,4 @@ for(let i = 0; i<movieClick.length;i++){
     console.log(movieClick[i].id);
   });
 }
+
