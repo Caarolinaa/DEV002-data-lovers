@@ -79,18 +79,26 @@ for (let i = 0; i < movieClick.length; i++) {
     movieClick[i].addEventListener('click', () => {
         const dataModal = movieClick[i].dataset;
         const modal = document.createElement("div");
-        modal.innerHTML = "sinopsis: " + dataModal.description;
+        const cerrar = document.createElement("span");
+        const sinopsis = document.createElement("h2");
+        sinopsis.innerHTML = "Sinopsis";
+        sinopsis.classList.add("sinopsis");
+        cerrar.innerHTML = "Volver";
+        cerrar.classList.add("cerrar");
+        modal.innerHTML = dataModal.description;
         modal.classList.add("modal");
+        modal.append(cerrar);
         moviesPoster.append(modal);
+        modal.append(sinopsis);
 
-        const button = document.createElement('button');
-        button.type = 'button';
-        button.innerText = 'Volver';
-        document.appendChild(button);
+        cerrar.addEventListener("click",function() {
+            modal.style.display = "none";
+          })
 
     });
 }
 
+//Icono Mouse
 const tracker = document.querySelector(".tracker");
 document.body.addEventListener("mousemove", e => {
     tracker.style.left = `${e.clientX}px`;
