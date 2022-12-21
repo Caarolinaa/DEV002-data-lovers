@@ -38,6 +38,7 @@ header {
     margin: 2% 30% 1% 37%;
     text-align: center;
     border-radius: 10px;
+    background-color: #b6ddf8;
 }
 
 
@@ -50,6 +51,9 @@ header {
 
 #selectorfilter {
     display: flex;
+    color: rgb(15, 24, 75);
+    background-color: #b6ddf8;
+    font-size: 100%;
     margin: 1% 30% 0% 37%;
     width: 25%;
     padding: 5px;
@@ -58,9 +62,11 @@ header {
     cursor: pointer;
 }
 
-.selectorfilter,option {
-    color: aliceblue;
-    background-color: #aba2e2;
+.selectorfilter,
+option {
+    font-size: 100%;
+    color: rgb(15, 24, 75);
+    background-color: #b6ddf8;
 }
 
 .poster-style {
@@ -107,36 +113,69 @@ footer {
     text-align: center;
     color: white;
 }
+
 /* MODAL */
 /* The Modal (background) */
 .modal {
-    display: flex; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    text-align: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    width: 100%; 
-    height: 100%; 
-    left: 0;
-    top: 0;
+    display: flex;
+    position: fixed;
+    padding: 0 2.5rem;
     margin: auto;
+    text-align: center;
+    align-items: center;
+    font-size: 90%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 40%;
+    height: 30%;
+    left: 30%;
+    top: 0;
     align-content: center;
-    justify-content: center;
-    background-color: rgb(168, 159, 159); /* Fallback color */
-    overflow-y: scroll;
-    z-index: 100;
-  }
+    background-color: #8db4ce;
+    border-radius: 30px;
+    transform: translateY(50%);
+
+}
+
+.sinopsis {
+    display: flex;
+    position: fixed;
+    left: 45%;
+    top: 20%;
+    color: white;
+
+}
+
+.cerrar {
+    display: flex;
+    position: fixed;
+    top: 80%;
+    left: 85%;
+    padding: 0.7rem;
+    color: white;
+    background-color: #24648f;
+    border-radius: 10px;
+    font-size: 22px;
+}
+
+.cerrar:hover {
+    box-shadow: 1px 0px 0px 4px rgb(216, 137, 164);
+    cursor: pointer;
+}
 
 
-  .tracker {
+.tracker {
     position: fixed;
     transform: translate(-50%, -50%);
     width: 40px;
     z-index: 9999;
     pointer-events: none;
     transition: all .15s;
-  }
+}
 
-  .tracker svg {
+.tracker svg {
     width: 100%;
     height: 100%;
-  }
+}
+
+
+/*Media Queries */
