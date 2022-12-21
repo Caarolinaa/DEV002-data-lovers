@@ -13,7 +13,8 @@ const generadorHTML = (movies) => {
     const div = document.createElement("article")
     div.setAttribute("class", "articlemovie")
     //movies contiene toda la data y acceso al id de cada film
-    div.setAttribute("id", movies.id)
+    div.setAttribute("data-id", movies.id)
+    div.setAttribute("data-description", movies.description)
 
     //título de cada película
     const movieTitle = document.createElement("h3")
@@ -25,27 +26,16 @@ const generadorHTML = (movies) => {
     img.setAttribute("class", "imgposter")
     img.setAttribute("src", movies.poster)
 
-    //modal realizado hoy
-    const a = document.createElement("a")
-    a.setAttribute("href","#"+movies.id )
-    a.appendChild(img)
-    const section = document.createElement("section")   
-    section.setAttribute("class", "modalDialog")        
-    section.setAttribute("id", movies.id)
-    const article = document.createElement("article")   
-    const p = document.createElement("p")   
-    p.textContent = movies.title
-    article.appendChild(p)
-    section.appendChild(article)
-
 
     //año de cada película
     const date = document.createElement("año")
     date.setAttribute("class", "dateMovies")
     date.textContent = movies.release_date
 
+
     //se crea div, append nos permite agrupar las 3 constantes de arriba en un div y se muestra en nuestra página
-    div.append(a,section, movieTitle, date)
+    // a, section 
+    div.append(img, movieTitle, date)
     return div
 }
 //funcion para mostrar los elementos en la pagina
@@ -83,12 +73,26 @@ searchMovie.addEventListener("keyup", e => {
     generadorCard(searchMov);
 })
 
-//let movieClick = document.querySelectorAll('.articlemovie');
-// let movieModalClick = movieClick.
-// console.log(movieClick.length)
+let movieClick = document.querySelectorAll('.articlemovie');
 
-//for(let i = 0; i<movieClick.length;i++){
-  //movieClick[i].addEventListener('click', (e) => {  
-    //console.log(movieClick[i].id);
-  //});
-//}
+for (let i = 0; i < movieClick.length; i++) {
+    movieClick[i].addEventListener('click', () => {
+        const dataModal = movieClick[i].dataset;
+        const modal = document.createElement("div");
+        modal.innerHTML = "sinopsis: " + dataModal.description;
+        modal.classList.add("modal");
+        moviesPoster.append(modal);
+
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.innerText = 'Volver';
+        document.appendChild(button);
+
+    });
+}
+
+const tracker = document.querySelector(".tracker");
+document.body.addEventListener("mousemove", e => {
+    tracker.style.left = `${e.clientX}px`;
+    tracker.style.top = `${e.clientY}px`;
+});
