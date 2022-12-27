@@ -1,5 +1,5 @@
 //importamos funciones de data.js
-import { dataMoviesDesc, dataMoviesAsc, filterSearch } from './data.js';
+import { dataMoviesDesc, dataMoviesAsc, filterSearch, funFact } from './data.js';
 import data from './data/ghibli/ghibli.js';
 
 //const para guardar la data desde ghibli.js
@@ -15,6 +15,7 @@ const generadorHTML = (movies) => {
     //movies contiene toda la data y acceso al id de cada film
     div.setAttribute("data-id", movies.id)
     div.setAttribute("data-description", movies.description)
+    div.setAttribute("data-score", movies.rt_score)    
 
     //título de cada película
     const movieTitle = document.createElement("h3")
@@ -38,6 +39,7 @@ const generadorHTML = (movies) => {
     div.append(img, movieTitle, date)
     return div
 }
+
 //funcion para mostrar los elementos en la pagina
 const generadorCard = (data) => {
     moviesPoster.innerHTML = "";
@@ -73,6 +75,21 @@ searchMovie.addEventListener("keyup", e => {
     generadorCard(searchMov);
 })
 
+//Calculo agregado
+
+document.getElementById("curious-fact-button").addEventListener("click", () => {
+    let prom1 = funFact(movies)
+    console.log("el score promedio es" + prom1)
+    alert(prom1)
+}
+
+
+);
+    
+
+
+
+
 let movieClick = document.querySelectorAll('.articlemovie');
 
 for (let i = 0; i < movieClick.length; i++) {
@@ -90,6 +107,7 @@ for (let i = 0; i < movieClick.length; i++) {
         modal.append(cerrar);
         moviesPoster.append(modal);
         modal.append(sinopsis);
+
 
         cerrar.addEventListener("click",function() {
             modal.style.display = "none";

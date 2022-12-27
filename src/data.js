@@ -19,3 +19,11 @@ export const dataMoviesDesc = (movies) => {
   });
   return yearSortDate;
 }
+
+//CALCULO AGREGADO
+export const funFact = (data) => {
+  let sum = data.reduce((a,b) => parseInt(b.rt_score));
+  let prom = sum / data.lenght;
+  console.log(prom);
+  return prom
+}
