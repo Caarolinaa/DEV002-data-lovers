@@ -25,7 +25,7 @@ body {
     background-image: url(./img/chihiro.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: fixed; /*imagen fijada del tamaño de la pantalla*/
 
 }
 
@@ -53,10 +53,13 @@ header {
     text-align: center;
     border-radius: 10px;
     background-color: #b6ddf8;
+
 }
 
 
 #boton-refresh {
+    
+    justify-content: flex-start;
     width: 100px;
     padding: 10px;
     margin: 0% 0% 0% 47%;
@@ -76,13 +79,16 @@ header {
     cursor: pointer;
 }
 
-.selectorfilter,
-option {
+.selectorfilter,option {
     font-size: 100%;
     color: rgb(15, 24, 75);
     background-color: #b6ddf8;
 }
 
+.curious-fact {
+    display: flex;
+    justify-content: center;
+}
 .poster-style {
     display: flex;
     padding: 0% 22% 5% 22%;
@@ -123,13 +129,11 @@ option {
 }
 
 footer {
-    margin-bottom: 0%;
+    margin-bottom: 3%;
     text-align: center;
     color: white;
 }
 
-/* MODAL */
-/* The Modal (background) */
 .modal {
     display: flex;
     position: fixed;
@@ -160,7 +164,6 @@ footer {
     background-color:#24648f;
     border-radius: 50px;
 }
-
 .sinopsis {
     display: flex;
     position: fixed;
@@ -181,7 +184,6 @@ footer {
     border-radius: 10px;
     font-size: 22px;
 }
-
 .cerrar:hover {
     box-shadow: 1px 0px 0px 4px rgb(216, 137, 164);
     cursor: pointer;
