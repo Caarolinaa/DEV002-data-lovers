@@ -19,3 +19,9 @@ export const dataMoviesDesc = (movies) => {
   });
   return yearSortDate;
 }
+
+//Calculo Agregado
+//export const scoreMovies = (movies, puntaje ) => {
+  ///const resultado = scoreMovies.reduce((rt_score, puntaje) => rt_score + puntaje, 0);
+  //return resultado;
+//}

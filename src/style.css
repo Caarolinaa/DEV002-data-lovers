@@ -5,6 +5,20 @@
     font-family: sans-serif;
 }
 
+.tracker {
+    position: fixed;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    z-index: 9999;
+    pointer-events: none;
+    transition: all .15s;
+}
+
+.tracker svg {
+    width: 100%;
+    height: 100%;
+}
+
 body {
     height: auto;
     width: auto;
@@ -45,7 +59,7 @@ header {
 #boton-refresh {
     width: 100px;
     padding: 10px;
-    transform: translate(1150%, -99%);
+    margin: 0% 0% 0% 47%;
     cursor: pointer;
 }
 
@@ -119,11 +133,11 @@ footer {
 .modal {
     display: flex;
     position: fixed;
-    padding: 0 2.5rem;
-    margin: auto;
+    padding: 2.5rem;
+    margin: 5% 5% 5% 5%;
     text-align: center;
     align-items: center;
-    font-size: 90%;
+    font-size: 14px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     width: 40%;
     height: 30%;
@@ -131,26 +145,37 @@ footer {
     top: 0;
     align-content: center;
     background-color: #8db4ce;
-    border-radius: 30px;
+    border-radius: 10px;
     transform: translateY(50%);
+    overflow-y: scroll;
 
+
+}
+
+.modal::-webkit-scrollbar{
+    width: 10px;
+}
+
+.modal::-webkit-scrollbar-thumb{
+    background-color:#24648f;
+    border-radius: 50px;
 }
 
 .sinopsis {
     display: flex;
     position: fixed;
     left: 45%;
-    top: 20%;
+    top: 15%;
     color: white;
 
 }
 
 .cerrar {
     display: flex;
-    position: fixed;
-    top: 80%;
+    position:static;
+    top: 100%;
     left: 85%;
-    padding: 0.7rem;
+    padding: 0.6rem;
     color: white;
     background-color: #24648f;
     border-radius: 10px;
@@ -163,19 +188,9 @@ footer {
 }
 
 
-.tracker {
-    position: fixed;
-    transform: translate(-50%, -50%);
-    width: 40px;
-    z-index: 9999;
-    pointer-events: none;
-    transition: all .15s;
-}
-
-.tracker svg {
-    width: 100%;
-    height: 100%;
-}
-
 
 /*Media Queries */
+
+@media screen and (max-width:768px){
+    
+}
