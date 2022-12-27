@@ -14,6 +14,8 @@ const generadorHTML = (movies) => {
     div.setAttribute("class", "articlemovie")
     //movies contiene toda la data y acceso al id de cada film
     div.setAttribute("data-id", movies.id)
+    //div.setAttribute("data.score", movies.rt_score)
+    //console.log("data.score");
     div.setAttribute("data-description", movies.description)
     div.setAttribute("data-score", movies.rt_score)    
 
@@ -33,6 +35,10 @@ const generadorHTML = (movies) => {
     date.setAttribute("class", "dateMovies")
     date.textContent = movies.release_date
 
+    //score de cada película
+    const score = document.createElement("puntaje")
+    score.setAttribute("class", "scoreMovies")
+    score.textContent = movies.rt_score
 
     //se crea div, append nos permite agrupar las 3 constantes de arriba en un div y se muestra en nuestra página
     // a, section 
@@ -69,9 +75,7 @@ selectDate.addEventListener("change", function (event) {
 //Buscador
 let searchMovie = document.getElementById("buscadorMovie");
 searchMovie.addEventListener("keyup", e => {
-    //console.log(e.target.value);
     let searchMov = filterSearch(movies, e.target.value);
-    //console.log(searchMov);
     generadorCard(searchMov);
 })
 
@@ -122,3 +126,4 @@ document.body.addEventListener("mousemove", e => {
     tracker.style.left = `${e.clientX}px`;
     tracker.style.top = `${e.clientY}px`;
 });
+
