@@ -22,13 +22,16 @@ export const dataMoviesDesc = (movies) => {
 
 //CALCULO AGREGADO
 export const funFact = (movies) => {
-  let sum = movies.reduce((a,b) => parseInt(b.rt_score),0);
+  let sum = movies.reduce((a,b) => parseFloat(b.rt_score),0);
   let prom = sum / movies.lenght;
   console.log(sum);
-  return prom
+  return prom;
 }
+
+
+
 //Calculo Agregado
-//export const scoreMovies = (movies, puntaje ) => {
-  ///const resultado = scoreMovies.reduce((rt_score, puntaje) => rt_score + puntaje, 0);
+//export const funFact = (movies, puntaje) => {
+  //const resultado = movies.reduce((rt_score, puntaje) => rt_score + puntaje, 0);
   //return resultado;
 //}

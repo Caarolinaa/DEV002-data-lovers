@@ -81,10 +81,11 @@ searchMovie.addEventListener("keyup", e => {
 
 //Calculo agregado
 
-document.getElementById("curious-fact-button").addEventListener("click", () => {
-    let prom1 = funFact(movies)
+let puntaje = document.getElementById("curious-fact-button");
+puntaje.addEventListener("click", () => {
+    let prom1 = funFact(movies);
     console.log("el score promedio es" + prom1)
-    alert(prom1)
+    //alert(prom1)
 }
 
 
@@ -102,9 +103,9 @@ for (let i = 0; i < movieClick.length; i++) {
         const modal = document.createElement("div");
         const cerrar = document.createElement("span");
         const sinopsis = document.createElement("h2");
-        sinopsis.innerHTML = "Sinopsis";
+        sinopsis.innerHTML = "SINOPSIS";
         sinopsis.classList.add("sinopsis");
-        cerrar.innerHTML = "Volver";
+        cerrar.innerHTML = "volver";
         cerrar.classList.add("cerrar");
         modal.innerHTML = dataModal.description;
         modal.classList.add("modal");
