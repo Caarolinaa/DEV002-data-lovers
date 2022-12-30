@@ -1,5 +1,5 @@
 //importamos funciones de data.js
-import { dataMoviesDesc, dataMoviesAsc, filterSearch, funFact } from './data.js';
+import { dataMoviesDesc, dataMoviesAsc, filterSearch, score, funFact } from './data.js';
 import data from './data/ghibli/ghibli.js';
 
 //const para guardar la data desde ghibli.js
@@ -82,9 +82,8 @@ searchMovie.addEventListener("keyup", e => {
 //Calculo agregado
 
 document.getElementById("curious-fact-button").addEventListener("click", () => {
-    let prom1 = funFact(movies)
-    console.log("el score promedio es" + prom1)
-    alert(prom1)
+    let scoreArray = score(movies.films);
+    alert (funFact(scoreArray))
 }
 
 
