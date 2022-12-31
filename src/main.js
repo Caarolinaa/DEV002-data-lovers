@@ -1,5 +1,5 @@
 //importamos funciones de data.js
-import { dataMoviesDesc, dataMoviesAsc, filterSearch, score, funFact } from './data.js';
+import { dataMoviesDesc, dataMoviesAsc, filterSearch, score } from './data.js';
 import data from './data/ghibli/ghibli.js';
 
 //const para guardar la data desde ghibli.js
@@ -14,8 +14,7 @@ const generadorHTML = (movies) => {
     div.setAttribute("class", "articlemovie")
     //movies contiene toda la data y acceso al id de cada film
     div.setAttribute("data-id", movies.id)
-    //div.setAttribute("data.score", movies.rt_score)
-    //console.log("data.score");
+
     div.setAttribute("data-description", movies.description)
     div.setAttribute("data-score", movies.rt_score)    
 
@@ -61,11 +60,11 @@ generadorCard(movies)
 let selectDate = document.getElementById("selectorfilter");
 selectDate.addEventListener("change", function (event) {
     if (event.target.value === "1") {
-        let movieAsc = dataMoviesAsc(movies)
+        let movieAsc = dataMoviesDesc(movies)
         //console.log(movieAsc); 
         generadorCard(movieAsc)
     } else if (event.target.value === "2") {
-        let movieDes = dataMoviesDesc(movies)
+        let movieDes = dataMoviesAsc(movies)
         //console.log(movieDes);
         generadorCard(movieDes)
     }
@@ -80,22 +79,9 @@ searchMovie.addEventListener("keyup", e => {
 })
 
 //Calculo agregado
-
-<<<<<<< HEAD
-document.getElementById("curious-fact-button").addEventListener("click", () => {
-    let scoreArray = score(movies.films);
-    alert (funFact(scoreArray))
-=======
-let puntaje = document.getElementById("curious-fact-button");
-puntaje.addEventListener("click", () => {
-    let prom1 = funFact(movies);
-    console.log("el score promedio es" + prom1)
-    //alert(prom1)
->>>>>>> 5668734bcd798a475be6f8c8a796884b3c37a0ee
-}
-
-
-);
+// const promedioResult = document.getElementById("curious-fact-button");
+// let scoreArray = score(movies.films);
+// promedioResult.innerHTML = score(scoreArray)
     
 
 
