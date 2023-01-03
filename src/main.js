@@ -1,5 +1,5 @@
 //importamos funciones de data.js
-import { dataMoviesDesc, dataMoviesAsc, filterSearch, score } from './data.js';
+import { dataMoviesDesc, dataMoviesAsc, filterSearch, funFact,  } from './data.js';
 import data from './data/ghibli/ghibli.js';
 
 //const para guardar la data desde ghibli.js
@@ -79,10 +79,13 @@ searchMovie.addEventListener("keyup", e => {
 })
 
 //Calculo agregado
-/* const promedioResult = document.getElementById("curious-fact-button");
-let scoreArray = score(movies.films);
-promedioResult.innerHTML = score(scoreArray) */
+const promedioResult = document.getElementById("curious-fact-button");
+promedioResult.addEventListener("click", ()=> {
+    let scoreAverage = funFact(movies);
+    promedioResult.innerHTML = "El score promedio de las peliculas de Studio Ghibli es " + scoreAverage
+} )
     
+
 
 
 let movieClick = document.querySelectorAll('.articlemovie');

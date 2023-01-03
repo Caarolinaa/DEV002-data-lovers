@@ -21,32 +21,9 @@ export const dataMoviesAsc = (movies) => {
 }
 
 //CALCULO AGREGADO
-// export const score = (movies) => {
-//   let scoreMovie= 0;
-//   for (let i=0; i< Object(movies).length; i++){
-//     let scoreNumber = parseInt(["rt_score"]);
-//     scoreMovie.push(scoreNumber)
-//   }
-//   return scoreMovie
-// }
+export const funFact = (movies) => {
+  const allResultsSum = movies.reduce((a, v)=> a + parseFloat(v.rt_score) ,0)
+  const totalResultsQty = movies.length
 
-// export const funFact = (movies) => {
-//   const promedio= movies.reduce((a,b) => a + b, 0) / Object(movies).length;
-//   const promedioFun = promedio.toFixed(2)
-//   return promedioFun
-// }
-
-  export const score = (movies) => {
-  let i = 0;
-  let suma = 0;
-  let arrayLen = Object(movies).length;
-
-  while (i < arrayLen) {
-    suma = suma + movies[i++];
-  }
-    return suma / arrayLen
-  }
-let scoreNumber = parseInt(["rt_score"])
-let scoreProm = score(scoreNumber)
-//console.log(scoreProm)
-
+  return allResultsSum / totalResultsQty
+}
