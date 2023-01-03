@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <title>Ghibli Fandom</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="home-logo-marca">
+    <img src="./img/logoBlanco.png" width="350px" height="95px" alt="">
+  </div>
+  <header>
+    <div class="home-logo">
+      <img src="./img/logoGhibli.png" alt="" width="400px" height="190px">
+    </div>
+  </header>
+  <section class="filterSection">
+    <div class="searchName">
+      <input type="search" class="buscador" id="buscadorMovie" name="buscador" placeholder="Busca tu película">
+    </div>
+    <div class="filterYear">
+      <select id="selectorfilter">
+        <option value="0" selected> Ordenar por </option>
+        <option value="1"> Año: Más reciente </option>
+        <option value="2"> Año: Más antiguo </option>
+      </select>
+    </div>
+    <div class="curious-fact">
+      <button class="curious-fact-button" id="curious-fact-button">CURIOUS FACT</button>
+    </div>
+    <div class="btn-refresh">
+      <img id="boton-refresh" alt="" src="./img/buttonresfresh.png" width="250px" onclick="window.location.reload();">
+    </div>
+  </section>
+  <!-- Seccion de peliculas -->
+  <main>
+    <section id="moviesPoster" class="poster-style">
+    </section>
+  </main>
+  <div class="tracker">
+    <img src="./img/soot.gif" width="55px" height="50px" alt="">
+  </div>
+
+  <script src="main.js" type="module"></script>
+  <footer>
+    <img src="https://i.pinimg.com/originals/91/1e/b1/911eb1f2cff48f9a4179835007eb7fbd.gif" width="60px" height="65px"
+      alt="">
+    <p>Data-Lovers 2022</p>
+  </footer>
+
+</body>
+
+</html>
