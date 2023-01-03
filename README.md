@@ -6,7 +6,7 @@
 * los usuarios principalmente son adolescentes, aunque hoy por hoy existe un amplio público de todas las edades, que es seguidor de este tipo de animaciones japonesas.
 
 ### ***¿Cuáles son los objetivos de estos usuarios en relación con el producto?***
-* Que el usuario pueda obtener mas datos relevantes sobre las peliculas, sinopsis y personajes
+* Que el usuario pueda obtener mas datos relevantes sobre las peliculas (año de publicacion, sinopsis). Y que pueda ademas, ver un dato curioso, que en este caso sera el promedio de los puntajes de las peliculas.
 
 ### ***¿Cuáles son los datos más relevantes que quieren ver en la interfaz y por qué?***
 
