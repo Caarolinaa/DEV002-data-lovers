@@ -36,7 +36,7 @@ export const dataMoviesAsc = (movies) => {
 //   return promedioFun
 // }
 
- export const score = (movies) => {
+  export const score = (movies) => {
   let i = 0;
   let suma = 0;
   let arrayLen = Object(movies).length;
@@ -48,5 +48,5 @@ export const dataMoviesAsc = (movies) => {
   }
 let scoreNumber = parseInt(["rt_score"])
 let scoreProm = score(scoreNumber)
+//console.log(scoreProm)
 
-console.log(scoreProm)

@@ -79,12 +79,10 @@ searchMovie.addEventListener("keyup", e => {
 })
 
 //Calculo agregado
-// const promedioResult = document.getElementById("curious-fact-button");
-// let scoreArray = score(movies.films);
-// promedioResult.innerHTML = score(scoreArray)
+/* const promedioResult = document.getElementById("curious-fact-button");
+let scoreArray = score(movies.films);
+promedioResult.innerHTML = score(scoreArray) */
     
-
-
 
 
 let movieClick = document.querySelectorAll('.articlemovie');
