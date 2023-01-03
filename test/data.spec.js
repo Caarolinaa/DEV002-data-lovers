@@ -1,48 +1,57 @@
-import { filterSearch, dataMoviesAsc, dataMoviesDesc } from '../src/data.js';
+import { filterSearch, dataMoviesAsc, dataMoviesDesc, funFact } from '../src/data.js';
 
 
 const data = {
   films: [
     {
       "title": "Castle in the Sky",
-      "release_date": "1986"
+      "release_date": "1986",
+      "rt_score": "95"
     },
     {
       "title": "Kiki's Delivery Service",
-      "release_date": "1989"
+      "release_date": "1989",
+      "rt_score": "96"
     },
     {
       "title": "Grave of the Fireflies",
-      "release_date": "1988"
+      "release_date": "1988",
+      "rt_score": "98"
     }]
 }
-const titleExpec = [{ "title": "Castle in the Sky", "release_date": "1986"}];
+const titleExpec = [{ "title": "Castle in the Sky", "release_date": "1986", "rt_score": "95"}];
 
-const dateExpecDesc = [{
+const dateExpecAsc = [{
   "title": "Castle in the Sky",
-  "release_date": "1986"
+  "release_date": "1986",
+  "rt_score": "95"
 },
 {
   "title": "Grave of the Fireflies",
-  "release_date": "1988"
+  "release_date": "1988",
+  "rt_score": "98"
 },
 {
   "title": "Kiki's Delivery Service",
-  "release_date": "1989"
+  "release_date": "1989",
+  "rt_score": "96"
 }
 ]
 
-const dateExpecAsc = [{
+const dateExpecDesc = [{
   "title": "Kiki's Delivery Service",
-  "release_date": "1989"
+  "release_date": "1989",
+  "rt_score": "96"
 },
 {
   "title": "Grave of the Fireflies",
-  "release_date": "1988"
+  "release_date": "1988",
+  "rt_score": "98"
 },
 {
   "title": "Castle in the Sky",
-  "release_date": "1986"
+  "release_date": "1986",
+  "rt_score": "95"
 }
 ]
 
@@ -69,5 +78,12 @@ describe('dataMoviesDesc', () => {
   it('Debería retornar las peliculas en orden descendente', () => {
     const resultado = dataMoviesDesc(data.films)
     expect(resultado).toEqual(dateExpecDesc);
+  });
+});
+
+describe('funFact', () => {
+  it('Debería retornar el promedio de los puntajes de las peliculas', () => {
+    const resultado = funFact(data.films)
+    expect(resultado).toEqual(96.33333333333333);
   });
 });
